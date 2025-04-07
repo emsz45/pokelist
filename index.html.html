@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos generales para la página de inicio */
+        body {
+            background: linear-gradient(135deg, #FF5733 0%, #FFCB05 100%); /* Degradado naranja-amarillo Pokémon */
+            color: white;
+            font-family: 'Pokemon Solid', sans-serif; /* Puedes cambiarlo si no tienes esta fuente */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 100px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra en el título */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #cd3b3b; /* Color azul de Poké Balls */
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #FF5733; /* Rojo brillante de Poké Ball al pasar el ratón */
+            transform: scale(1.1); /* Agranda el botón al hacer hover */
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        a:active {
+            transform: scale(1.05);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Pokémon</h1>
+    <a href="pokemon.html">Ver lista</a>
+</body>
+</html>

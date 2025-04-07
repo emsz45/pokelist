@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Lista de Pokémon</h1>
+
+    <table id="pokemonTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prevBtn" disabled>&lt;</button>
+        <button id="nextBtn">&gt;</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="pokemonName"></h2>
+            <img id="pokemonImage" src="" alt="Imagen del Pokémon">
+            <h3>Habilidades:</h3>
+            <ul id="pokemonAbilities"></ul>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="pokemons.js"></script>
+</body>
+</html>

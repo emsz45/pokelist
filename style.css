@@ -1,0 +1,174 @@
+/* Estilos generales para la página */
+body {
+    background: linear-gradient(135deg, #FF5733 0%, #FFCB05 100%); /* Fondo degradado inspirado en Pokémon */
+    color: #fff;
+    font-family: 'Pokemon Solid', sans-serif; /* Puedes usar una fuente similar si no tienes la de Pokémon */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 50px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(151, 147, 147, 0.4);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #FFCB05; /* Línea divisoria en color amarillo Pokémon */
+}
+
+th {
+    background-color: #e79523;
+    color: white;
+}
+
+td {
+    background-color: #dc3a52;
+}
+
+td:hover {
+    background-color: #FF5733; /* Rojo cuando se pasa el ratón */
+    cursor: pointer;
+    color: white;
+}
+
+/* Paginación */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #db2a42; /* Azul de la Poké Ball */
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #e35f44; /* Desactiva el color del botón cuando no es clickeable */
+}
+
+.pagination button:hover {
+    background-color: #FF5733; /* Rojo cuando se pasa el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.pagination button:active {
+    transform: scale(1.05);
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+    align-items: center; /* Centra el modal */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border: 5px solid #FFCB05;
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Pokemon Solid', sans-serif;
+    background: linear-gradient(135deg, #FF0000 0%, #F0F8FF 100%);
+    max-width: 90%; /* Limita el tamaño máximo al 90% de la pantalla */
+    max-height: 90%; /* Limita el alto máximo al 90% de la pantalla */
+    overflow-y: auto;
+}
+
+.close {
+    font-size: 35px;
+    color: #FFCB05;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF5733;
+    text-decoration: none;
+}
+
+/* Estilos para la imagen del Pokémon en el modal */
+#pokemonImage {
+    width: 100%; /* Asegura que la imagen se ajuste al 100% del contenedor */
+    max-width: 400px; /* Establece un tamaño máximo para que no se agrande demasiado */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 10px;
+    margin-top: 20px;
+    display: block; /* Asegura que la imagen esté centrada */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para la lista de habilidades */
+#pokemonAbilities {
+    list-style-type: none;
+    padding: 0;
+}
+
+#pokemonAbilities li {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#pokemonAbilities li:hover {
+    background-color: #8a0f2a;
+    cursor: pointer;
+}
+
+/* Media query para mejorar la visualización en dispositivos móviles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 85%; /* Hace el modal más ancho en pantallas pequeñas */
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .close {
+        font-size: 30px; /* Reduce el tamaño del botón de cerrar */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título dentro del modal */
+    }
+
+    #pokemonImage {
+        max-width: 90%; /* Limita el tamaño máximo a un 90% del ancho en móviles */
+        margin-top: 10px; 
+    }
+
+    #pokemonAbilities li {
+        font-size: 1rem; /* Ajusta el tamaño de la lista de habilidades */
+    }
+}
